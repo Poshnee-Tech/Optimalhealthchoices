@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className+=" js"</script>
+<title>Terms & Conditions — OptimalHealthChoices</title>
+<meta name="description" content="The terms governing your use of OptimalHealthChoices.com, operated by Poshnee Tech LLC.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://optimalhealthchoices.com/terms">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='11' fill='%232E1B33'/%3E%3Cpath d='M30.46 19.08 A10.5 10.5 0 1 1 24.44 10.48' fill='none' stroke='%23DE8A24' stroke-width='3.3' stroke-linecap='round'/%3E%3Ccircle cx='28.6' cy='13.98' r='3.5' fill='%23DE8A24'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#2E1B33">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OptimalHealthChoices">
+<meta property="og:title" content="Terms &amp; Conditions — OptimalHealthChoices">
+<meta property="og:description" content="The terms governing your use of OptimalHealthChoices.com, operated by Poshnee Tech LLC.">
+<meta property="og:url" content="https://optimalhealthchoices.com/terms">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Terms &amp; Conditions — OptimalHealthChoices">
+<meta name="twitter:description" content="The terms governing your use of OptimalHealthChoices.com, operated by Poshnee Tech LLC.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ===========================================================
+   DESIGN SYSTEM — single token set used by every page.
+   Palette: plum ink / warm paper / amber signal.
+   Avoids Medicare-card blue+white and red-white-blue by design.
+   =========================================================== */
+:root{
+  /* color */
+  --plum:#2E1B33; --plum-2:#40284A; --plum-3:#5A3A66;
+  --ink:#1E1520; --ink-2:#4A3D50; --muted:#6E6674;
+  --paper:#FBF9F8; --paper-2:#F4EFF4; --surface:#FFFFFF;
+  --line:#E4DCE6; --line-2:#F0EAF1; --field:#8E8095; --field-hover:#6E6478; --placeholder:#7A7080;
+  --amber:#DE8A24; --amber-soft:#FBEEDA; --amber-line:#EFDCBE; --amber-deep:#8F5410;
+  --on-dark:#F6F1F7; --on-dark-2:#C6B6CB; --on-dark-3:#9C8CA3;
+  --error:#B3261E;
+
+  /* type */
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --ui:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  /* rem so a visitor who raises their browser's default font size scales the whole page */
+  --fs-micro:.8125rem; --fs-sm:.9375rem; --fs-legal:1rem; --fs-body:1.0625rem; --fs-lead:1.1875rem;
+
+  /* shape */
+  --r-sm:8px; --r-md:12px; --r-lg:18px; --r-pill:999px;
+  --sh-1:0 1px 2px rgba(46,27,51,.05);
+  --sh-2:0 2px 6px rgba(46,27,51,.05),0 18px 40px -18px rgba(46,27,51,.22);
+  --sh-3:0 6px 16px rgba(46,27,51,.08),0 44px 80px -32px rgba(46,27,51,.4);
+
+  /* layout */
+  --max:1200px; --pad:clamp(1.25rem,4vw,3rem); --stack:clamp(3.5rem,7vw,6rem);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--ui);
+     font-size:var(--fs-body);line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0;font-family:var(--display);font-weight:700;line-height:1.1;letter-spacing:-.035em}
+p{margin:0 0 1em}p:last-child{margin-bottom:0}
+a{color:var(--plum-3);text-underline-offset:.2em}
+a:hover{color:var(--plum)}
+/* amber-deep clears 3:1 on paper; the lighter amber is restored on dark sections below */
+:focus-visible{outline:3px solid var(--amber-deep);outline-offset:3px}
+.hero :focus-visible,.banner :focus-visible,.next :focus-visible,.foot :focus-visible,
+.utility :focus-visible,.skip:focus-visible{outline-color:var(--amber)}
+.wrap{max-width:var(--max);margin-inline:auto;padding-inline:var(--pad)}
+.skip{position:absolute;left:-9999px;background:var(--plum);color:#fff;padding:.9rem 1.4rem;z-index:200;font-weight:600}
+.skip:focus{left:0;top:0}
+.sr{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* --- utility bar: hours always accompany the phone number --- */
+.utility{background:var(--plum);color:var(--on-dark-2);font-size:var(--fs-legal)}
+.utility .wrap{display:flex;flex-wrap:wrap;gap:.2rem 1.5rem;align-items:center;justify-content:center;
+  text-align:center;padding-block:.65rem}
+.utility a{color:#fff;font-weight:700;display:inline-block;padding-block:.5rem;margin-block:-.5rem;
+  text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:.18em}
+.utility a:hover{text-decoration-color:#fff}
+.utility .hrs{color:var(--on-dark-3)}
+.utility .pre-s{display:none}
+
+/* --- masthead --- */
+.masthead{position:sticky;top:0;z-index:60;background:rgba(251,249,248,.985);
+          -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);
+          box-shadow:0 1px 0 rgba(46,27,51,.03),0 8px 24px -20px rgba(46,27,51,.25)}
+.masthead .wrap{display:flex;align-items:center;justify-content:space-between;gap:1.5rem;padding-block:.8rem}
+
+/* LOGO — one swappable block, shared by header and footer */
+.logo{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;white-space:nowrap;padding-block:.3rem;min-height:44px}
+.logo svg{width:38px;height:38px;flex:none;display:block}
+.logo .wm{font-family:var(--display);font-size:21px;letter-spacing:-.042em;color:var(--plum);line-height:1}
+.logo .wm .l{font-weight:500}
+.logo .wm .h{font-weight:800}
+.logo.on-dark .wm{color:var(--on-dark)}
+
+.nav{display:flex;align-items:center;gap:.15rem;position:relative}
+.nav .links{display:flex;align-items:center;gap:.15rem}
+.nav a{color:var(--ink-2);text-decoration:none;font-size:var(--fs-sm);font-weight:600;
+       padding:.55rem .75rem;border-radius:var(--r-sm)}
+.nav a:hover{color:var(--plum);background:var(--paper-2)}
+.nav a[aria-current=page]{color:var(--plum)}
+.nav .m-cta{display:none}
+.menu-btn{display:none;align-items:center;gap:.45rem;margin-left:.35rem;min-height:44px;min-width:44px;
+  padding:.5rem .7rem;background:transparent;border:1.5px solid var(--line);border-radius:var(--r-pill);
+  color:var(--ink-2);font:600 var(--fs-sm)/1 var(--ui);cursor:pointer}
+.menu-btn:hover{background:var(--paper-2);color:var(--plum)}
+.menu-btn svg{width:18px;height:18px;display:block}
+.menu-btn .x{display:none}
+.menu-btn[aria-expanded=true] .x{display:block}
+.menu-btn[aria-expanded=true] .h{display:none}
+.nav .cta{margin-left:.5rem;background:var(--plum);color:#fff;padding:.75rem 1.25rem;
+          border-radius:var(--r-pill);min-height:44px;display:inline-flex;align-items:center;white-space:nowrap}
+.nav .cta:hover{background:var(--plum-2);color:#fff}
+
+/* --- non-affiliation microbar: >=12pt, visible on load, every page --- */
+.microbar{background:var(--amber-soft);border-bottom:1px solid var(--amber-line)}
+.microbar .wrap{padding-block:.7rem;font-size:var(--fs-legal);font-weight:500;color:#4A3208;text-align:center}
+
+/* --- shared section furniture --- */
+.section{padding-block:var(--stack)}
+.section.alt{background:var(--paper-2)}
+.shead{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:2rem;
+       align-items:start;margin-bottom:clamp(2rem,3.5vw,3rem)}
+.shead.solo{grid-template-columns:1fr}
+.kicker{font-family:var(--ui);font-size:var(--fs-micro);font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+        color:var(--amber-deep);margin-bottom:.85rem}
+.shead h2{font-size:clamp(1.85rem,3.4vw,2.6rem);max-width:24ch;text-wrap:balance}
+/* The deck clears the kicker so its first line sits on the heading's first line.
+   Bottom-aligning the two columns instead leaves the deck anchored to nothing:
+   the boxes line up but the text baselines never do. */
+.shead p{font-size:var(--fs-lead);color:var(--muted);max-width:52ch;line-height:1.55;
+  margin:calc(var(--fs-micro) * 1.62 + .85rem) 0 0}
+
+/* --- hero --- */
+.hero{background:var(--plum);color:var(--on-dark);position:relative;overflow:hidden;overflow:clip}
+.hero::after{content:"";position:absolute;z-index:0;right:-8%;top:-30%;width:60%;height:150%;
+  background:radial-gradient(closest-side,rgba(222,138,36,.16),transparent 72%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1;display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(370px,430px);
+  gap:clamp(2rem,4vw,3.5rem);align-items:start;padding-block:clamp(2.5rem,4.5vw,4.25rem)}
+.hero h1{font-size:clamp(2rem,3.5vw,3.1rem);letter-spacing:-.038em;font-weight:800;
+  max-width:16ch;margin-bottom:1.1rem;text-wrap:balance}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero .sub{font-size:1.08rem;color:var(--on-dark-2);max-width:44ch;margin-bottom:1.75rem;line-height:1.55}
+.hero .lead{position:sticky;top:calc(76px + 2rem);align-self:start}
+.callbox{display:flex;gap:1rem;align-items:flex-start;margin-top:2.25rem;padding:1.15rem 1.25rem;max-width:34rem;
+  border:1px solid rgba(255,255,255,.12);border-radius:var(--r-md);background:rgba(255,255,255,.05)}
+.callbox .ic{width:42px;height:42px;border-radius:11px;background:rgba(222,138,36,.16);color:var(--amber);
+  display:grid;place-items:center;flex:none}
+.callbox .ic svg{width:20px;height:20px}
+.callbox p{margin:0;font-size:var(--fs-legal);line-height:1.5;color:var(--on-dark-2)}
+.callbox strong{color:#fff;font-weight:700;display:block;margin-bottom:.15rem}
+.callbox a{color:#fff;font-weight:700;display:inline-block;padding-block:.5rem;margin-block:-.5rem;
+  text-decoration:underline;text-decoration-color:rgba(255,255,255,.45);text-underline-offset:.18em}
+.callbox a:hover{color:var(--amber);text-decoration-color:var(--amber)}
+.callbox .hrs{display:block;color:var(--on-dark-2);font-size:var(--fs-legal);margin-top:.2rem}
+.marks{display:grid;gap:.6rem;max-width:38ch}
+.marks div{display:flex;gap:.75rem;align-items:center;font-size:var(--fs-legal);font-weight:500;color:#EAE1EC}
+.marks .n{width:26px;height:26px;border-radius:50%;flex:none;display:grid;place-items:center;
+  border:1.5px solid rgba(222,138,36,.55);color:var(--amber);font-size:12px;font-weight:700}
+
+/* --- compact page banner (interior pages) --- */
+.banner{background:var(--plum);color:var(--on-dark);position:relative;overflow:hidden}
+.banner::after{content:"";position:absolute;z-index:0;right:-6%;top:-40%;width:50%;height:180%;
+  background:radial-gradient(closest-side,rgba(222,138,36,.14),transparent 72%);pointer-events:none}
+.banner .wrap{position:relative;z-index:1;padding-block:clamp(2.5rem,4.5vw,3.75rem)}
+.banner h1{font-size:clamp(1.9rem,3.6vw,2.9rem);font-weight:800;max-width:20ch;margin-bottom:.75rem}
+.banner .meta{font-size:var(--fs-sm);color:var(--on-dark-3);display:flex;flex-wrap:wrap;gap:.35rem 1.5rem}
+
+/* --- form card --- */
+.card{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--sh-3);
+      padding:clamp(1.35rem,1.9vw,1.75rem);color:var(--ink);scroll-margin-top:100px}
+.card h2{font-size:1.32rem;margin-bottom:.3rem}
+.card .lede{font-size:var(--fs-sm);color:var(--muted);margin-bottom:1.25rem;line-height:1.5}
+.prog{margin-bottom:1.25rem}
+.prog .meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.55rem}
+.prog .now{font-size:var(--fs-sm);font-weight:700}
+.prog .cnt{font-size:var(--fs-micro);font-weight:600;color:var(--muted)}
+.bar{height:5px;background:var(--line-2);border-radius:var(--r-pill);overflow:hidden}
+.bar i{display:block;height:100%;width:33.33%;background:var(--amber);transition:width .4s cubic-bezier(.4,0,.2,1)}
+
+fieldset{border:0;padding:0;margin:0 0 1.25rem}
+legend{font-size:var(--fs-legal);font-weight:700;padding:0;margin-bottom:.65rem;line-height:1.4}
+.field{margin-bottom:.9rem}
+.field label{display:block;font-size:var(--fs-sm);font-weight:700;margin-bottom:.4rem;color:var(--ink-2)}
+.hint{display:block;font-size:var(--fs-sm);color:var(--muted);margin-top:.45rem;line-height:1.5}
+input[type=text],input[type=tel],input[type=email],select,textarea{
+  width:100%;font-family:var(--ui);font-size:var(--fs-legal);font-weight:500;
+  padding:.7rem .9rem;background:var(--surface);color:var(--ink);
+  border:1.5px solid var(--field);border-radius:var(--r-sm);min-height:50px;
+  transition:border-color .15s,box-shadow .15s}
+textarea{min-height:120px;padding:.8rem .9rem;line-height:1.55;resize:vertical}
+::placeholder{color:var(--placeholder);opacity:1;font-weight:400}
+input:hover,select:hover,textarea:hover{border-color:var(--field-hover)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--plum-3);
+  box-shadow:0 0 0 4px rgba(90,58,102,.14)}
+input.bad,select.bad{border-color:var(--error)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
+
+.choices{display:grid;gap:.5rem}
+.choice{display:flex;align-items:center;gap:.85rem;cursor:pointer;
+  border:1.5px solid var(--field);border-radius:var(--r-sm);background:var(--surface);
+  padding:.75rem 1rem;min-height:54px;font-size:var(--fs-legal);font-weight:600;color:var(--ink-2);
+  transition:border-color .15s,background .15s}
+.choice:hover{border-color:var(--field-hover);background:var(--paper)}
+.choice input{width:22px;height:22px;accent-color:var(--plum-3);margin:0;flex:none}
+.choice:has(input:checked){border-color:var(--plum-3);background:var(--paper-2);color:var(--ink)}
+.choice:has(input:focus-visible){outline:3px solid var(--amber);outline-offset:2px}
+
+/* consent: >=12pt, full contrast, normal flow, never scroll-boxed */
+.consent{border:1.5px solid var(--line);border-radius:var(--r-md);background:var(--paper);
+  padding:1.15rem;margin-bottom:1.15rem}
+.consent .cap{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--amber-deep);margin-bottom:1rem}
+.check{display:flex;gap:.85rem;align-items:flex-start;margin-bottom:1.15rem}
+.check:last-of-type{margin-bottom:0}
+.check input{width:24px;height:24px;margin:2px 0 0;accent-color:var(--plum-3);flex:none;cursor:pointer}
+.check label{font-size:var(--fs-legal);line-height:1.55;cursor:pointer;color:var(--ink)}
+.check strong{font-weight:700}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;width:100%;
+  border:0;cursor:pointer;border-radius:var(--r-pill);background:var(--plum);color:#fff;
+  font-family:var(--ui);font-weight:700;font-size:var(--fs-legal);padding:.85rem 1.4rem;min-height:54px;
+  box-shadow:0 10px 24px -12px rgba(46,27,51,.7);transition:background .15s,transform .12s}
+.btn:hover{background:var(--plum-2);transform:translateY(-1px)}
+.btn:active{transform:none}
+.btn.ghost{background:transparent;color:var(--ink-2);border:1.5px solid var(--line);box-shadow:none}
+.btn.ghost:hover{background:var(--paper-2);color:var(--plum);transform:none}
+.btn.inline{width:auto}
+.btnrow{display:grid;grid-template-columns:auto 1fr;gap:.7rem}
+.reassure{font-size:var(--fs-sm);color:var(--muted);margin-top:1rem;text-align:center;line-height:1.5}
+.err{display:none;font-size:var(--fs-sm);color:var(--error);font-weight:700;margin-top:.4rem}
+.err.show{display:block}
+.card-note{grid-column:2;margin-top:1.15rem;font-size:var(--fs-legal);line-height:1.6;
+  color:#EDE4EF;max-width:430px}
+.card-note strong{color:#fff;font-weight:700}
+.step{animation:in .3s cubic-bezier(.4,0,.2,1)}
+@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+/* --- "after you submit" band --- */
+.next{background:var(--plum-2);color:#F3ECF4;border-top:1px solid rgba(255,255,255,.08)}
+.next .wrap{padding-block:clamp(2.75rem,5vw,4rem)}
+.next .kicker{color:var(--amber);margin-bottom:.7rem}
+.next h2{font-size:clamp(1.6rem,2.8vw,2.2rem);max-width:24ch;text-wrap:balance;margin-bottom:1.9rem}
+.beats{display:grid;grid-template-columns:repeat(3,1fr);gap:0}
+.beat{padding:0 2rem;border-left:1px solid rgba(255,255,255,.14)}
+.beat:first-child{padding-left:0;border-left:0}
+.beat:last-child{padding-right:0}
+.beat .num{display:block;font-family:var(--display);font-size:2.6rem;font-weight:800;
+  color:rgba(222,138,36,.3);line-height:1;margin-bottom:.6rem}
+.beat h3{font-size:1.3rem;margin-bottom:.5rem;text-wrap:balance}
+.beat p{font-size:var(--fs-legal);color:#BEAFC4;line-height:1.55;margin:0}
+.beat strong{color:#fff;font-weight:600}
+
+/* --- content patterns --- */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.25rem,3vw,2.5rem);
+  list-style:none;margin:0;padding:0}
+.steps li{border-top:2px solid var(--plum);padding-top:1.35rem}
+.steps .n{font-family:var(--display);font-size:var(--fs-sm);font-weight:700;color:var(--amber-deep);
+  letter-spacing:.1em;display:block;margin-bottom:.6rem}
+.steps h3{font-size:1.3rem;margin-bottom:.55rem}
+.steps p{color:var(--muted);font-size:var(--fs-legal)}
+
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);
+  padding:1.6rem;transition:border-color .18s,box-shadow .18s,transform .18s}
+.tile:hover{border-color:#D9CADC;box-shadow:var(--sh-2);transform:translateY(-2px)}
+.tile-link{display:block;text-decoration:none;color:inherit}
+.tile-link:hover h3{color:var(--plum-3)}
+/* spam honeypot: off-screen, never shown, checked server-side */
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.tile h3{font-size:1.15rem;margin-bottom:.55rem}
+.tile p{color:var(--muted);font-size:var(--fs-legal);margin:0}
+
+.rows .row{display:grid;grid-template-columns:minmax(0,17rem) 1fr;gap:1.5rem;
+  padding:1.55rem 0;border-bottom:1px solid var(--line)}
+.rows .row:first-child{padding-top:0}
+.rows .row:last-child{border-bottom:0}
+.rows h3{font-size:1.15rem}
+.rows p{color:var(--muted);font-size:var(--fs-legal);margin:0}
+
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;padding:1.3rem 3rem 1.3rem 0;font-weight:700;
+  font-size:var(--fs-body);position:relative;font-family:var(--display);letter-spacing:-.02em}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:.4rem;top:50%;width:14px;height:2px;
+  background:var(--amber);transform:translateY(-50%)}
+summary::before{content:"";position:absolute;right:6.4px;top:50%;width:2px;height:14px;
+  background:var(--amber);transform:translateY(-50%);transition:transform .22s}
+details[open] summary::before{transform:translateY(-50%) scaleY(0)}
+summary:hover{color:var(--plum-3)}
+.ans{padding:0 0 1.4rem;color:var(--muted);font-size:var(--fs-legal);max-width:62ch}
+
+.langbox{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;background:var(--amber-soft);
+  border:1px solid var(--amber-line);border-radius:var(--r-md);padding:1.6rem}
+.langbox .ic{width:42px;height:42px;border-radius:11px;background:var(--amber);
+  display:grid;place-items:center;color:#fff;flex:none}
+.langbox p{font-size:var(--fs-legal);margin-bottom:.4rem;color:#4A3208}
+.langbox p:last-child{margin-bottom:0;color:#6B4C15}
+
+/* --- legal prose pages --- */
+.legal{padding-block:var(--stack)}
+.legal .wrap{display:grid;grid-template-columns:230px minmax(0,1fr);gap:clamp(2rem,5vw,4rem);align-items:start}
+.toc{position:sticky;top:110px}
+.toc .h{font-size:var(--fs-micro);font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--amber-deep);margin-bottom:.9rem}
+.toc ol{list-style:none;margin:0;padding:0;counter-reset:t;display:grid;gap:.1rem}
+.toc li{counter-increment:t}
+.toc a{display:block;padding:.7rem .5rem .7rem 0;min-height:44px;font-size:var(--fs-sm);color:var(--ink-2);
+  text-decoration:none;border-radius:var(--r-sm);line-height:1.4}
+.toc a::before{content:counter(t) ". ";color:var(--amber-deep);font-weight:700}
+.toc a:hover{color:var(--plum);background:var(--paper-2);padding-left:.5rem}
+.prose{max-width:70ch}
+.prose > section{padding-bottom:2.25rem;margin-bottom:2.25rem;border-bottom:1px solid var(--line)}
+.prose > section:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+.prose h2{font-size:clamp(1.4rem,2.4vw,1.8rem);margin-bottom:.85rem;scroll-margin-top:110px}
+.prose h3{font-size:1.12rem;margin:1.5rem 0 .5rem}
+.prose p,.prose li{font-size:var(--fs-legal);line-height:1.65;color:var(--ink)}
+.prose ul{margin:0 0 1em;padding-left:1.25rem}
+.prose li{margin-bottom:.45rem}
+.prose .note{background:var(--paper-2);border-left:3px solid var(--amber);border-radius:0 var(--r-sm) var(--r-sm) 0;
+  padding:1.1rem 1.25rem;margin:1.25rem 0}
+.prose .note p{margin:0;color:var(--ink-2)}
+.prose table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:var(--fs-legal)}
+.prose th,.prose td{text-align:left;padding:.7rem .75rem;border-bottom:1px solid var(--line);vertical-align:top}
+.prose th{font-weight:700;background:var(--paper-2)}
+
+/* --- disclosures: >=12pt, body contrast, expanded on load, same on mobile --- */
+.disc{background:var(--surface);border-top:1px solid var(--line);padding-block:var(--stack)}
+.disc h2{font-size:clamp(1.6rem,2.8vw,2.2rem);margin-bottom:.6rem}
+.disc .dsub{color:var(--muted);font-size:var(--fs-lead);margin-bottom:2.25rem;max-width:54ch}
+.clause{border-top:1px solid var(--line);padding:1.55rem 0;max-width:80ch}
+.clause h3{font-family:var(--ui);font-size:12.5px;font-weight:700;letter-spacing:.11em;
+  text-transform:uppercase;color:var(--muted);margin-bottom:.65rem}
+.clause p{font-size:var(--fs-legal);line-height:1.62;color:var(--ink);margin:0}
+.clause.key{background:var(--paper-2);border:1.5px solid var(--plum-3);border-radius:var(--r-md);
+  padding:1.6rem;margin-bottom:1.5rem}
+.clause.key h3{color:var(--plum-3)}
+
+/* --- footer --- */
+.foot{background:var(--plum);color:var(--on-dark-2);padding-block:clamp(3rem,5vw,4rem)}
+.foot .top{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem;
+  padding-bottom:2.25rem;border-bottom:1px solid rgba(255,255,255,.1)}
+.foot address{font-style:normal;font-size:var(--fs-legal);line-height:1.7;margin-top:1.15rem}
+.foot address strong{color:var(--on-dark);font-weight:600}
+.foot a{color:var(--on-dark)}
+.foot .links{display:grid;gap:.15rem;align-content:start}
+.foot .links .h{font-size:12.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;
+  color:var(--on-dark-3);margin-bottom:.35rem}
+.foot .links a{font-size:var(--fs-legal);text-decoration:none;display:inline-flex;align-items:center;
+  padding:.55rem 0;min-height:44px}
+.foot .links a:hover{text-decoration:underline}
+.foot .bottom{display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:center;
+  padding-top:1.75rem;font-size:var(--fs-sm)}
+.smid{border:1px dashed rgba(255,255,255,.28);border-radius:var(--r-sm);padding:.45rem .85rem;
+  color:var(--on-dark);font-size:var(--fs-sm)}
+
+/* --- progressive enhancement: all steps render without JS --- */
+.js .step[hidden]{display:none}
+.step[hidden]{display:block}
+/* Without JS the progress bar and the step buttons are meaningless — every step is already visible. */
+html:not(.js) .prog,html:not(.js) [data-next],html:not(.js) [data-back]{display:none}
+html:not(.js) .nojs-note{display:block}
+.nojs-note{display:none;font-size:var(--fs-sm);color:var(--muted);margin:-.4rem 0 1.1rem;line-height:1.5}
+
+/* --- responsive --- */
+@media (max-width:1040px){
+  .hero .wrap{grid-template-columns:1fr;gap:2.25rem;align-items:start}
+  .card-note{grid-column:1;max-width:560px}
+  .card{max-width:560px}
+  .hero .lead{position:static}
+  .callbox{max-width:560px}
+  .js .menu-btn{display:inline-flex}
+  .js .nav .links{display:none;position:absolute;right:0;top:calc(100% + .75rem);z-index:70;min-width:240px;
+    flex-direction:column;align-items:stretch;gap:.1rem;padding:.6rem;background:var(--surface);
+    border:1px solid var(--line);border-radius:var(--r-md);box-shadow:var(--sh-3)}
+  .js .nav .links.open{display:flex}
+  .js .nav .links a{padding:.8rem .9rem;font-size:var(--fs-legal);min-height:44px;display:flex;align-items:center}
+  .shead{grid-template-columns:1fr;gap:1rem;align-items:start}
+  .shead p{margin-top:0}
+  .legal .wrap{grid-template-columns:1fr;gap:2rem}
+  .toc{position:static;border:1px solid var(--line);border-radius:var(--r-md);
+       background:var(--surface);padding:1.15rem}
+  .foot .top{grid-template-columns:1fr 1fr;gap:2rem}
+}
+@media (max-width:780px){
+  .beats,.steps,.grid2{grid-template-columns:1fr}
+  .beat{padding:1.4rem 0;border-left:0;border-top:1px solid rgba(255,255,255,.14)}
+  .beat:first-child{padding-top:0;border-top:0}
+  .beat .num{font-size:2rem}
+  .rows .row{grid-template-columns:1fr;gap:.5rem}
+  .foot .top{grid-template-columns:1fr;gap:2rem}
+  .row2,.btnrow{grid-template-columns:1fr}
+  .card{max-width:none}
+  .langbox{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .masthead .wrap{gap:.6rem}
+  .logo{gap:.5rem}
+  .logo svg{width:32px;height:32px}
+  .logo .wm{font-size:15px}
+  .nav .cta{margin-left:0;padding:.5rem .9rem;font-size:.90625rem;min-height:44px}
+  .menu-btn{padding:.5rem .6rem;margin-left:.15rem}
+  .menu-btn .t{display:none}
+  .js .nav .links{right:-.25rem;left:auto;min-width:min(260px,calc(100vw - 2rem))}
+}
+@media (max-width:480px){
+  /* Not enough room for logo + CTA + menu: the CTA moves into the menu panel; the phone number stays in the utility bar. */
+  .js .nav .cta{display:none}
+  .js .nav .m-cta{display:flex;background:var(--plum);color:#fff;border-radius:var(--r-sm);justify-content:center;margin-bottom:.35rem}
+  .js .nav .m-cta:hover{background:var(--plum-2);color:#fff}
+  .logo .wm{font-size:14px}
+  .utility .wrap{gap:.15rem 1rem;padding-block:.55rem}
+  .utility .pre{display:none}
+  .utility .pre-s{display:inline}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+@media print{
+  .utility,.masthead,.card,.nav,.toc{display:none}
+  body{font-size:12pt}
+  .disc,.section.alt,.legal{background:#fff}
+  .legal .wrap{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<div class="utility">
+  <div class="wrap">
+    <span><span class="pre">Questions? Speak with a licensed insurance agent: </span><span class="pre-s">Licensed agent: </span><a href="tel:+18336905085">(833) 690-5085</a> (TTY 711)</span>
+    <span class="hrs">Mon–Fri, 9:00 AM–9:00 PM ET</span>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="OptimalHealthChoices — home"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="#2E1B33"/><path d="M30.46 19.08 A10.5 10.5 0 1 1 24.44 10.48" fill="none" stroke="#DE8A24" stroke-width="3.3" stroke-linecap="round"/><circle cx="28.6" cy="13.98" r="3.5" fill="#DE8A24"/></svg><span class="wm"><span class="l">Optimal</span><span class="h">HealthChoices</span></span></a>
+    <nav class="nav" aria-label="Primary">
+      <div class="links" id="primary-links">
+        <a class="m-cta" href="index.html#form">Get Started</a>
+        <a href="index.html#how">How It Works</a>
+        <a href="index.html#coverage">Coverage Types</a>
+        <a href="index.html#periods">Enrollment Periods</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <a class="cta" href="index.html#form">Get Started</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="primary-links" aria-label="Menu"><span class="t" aria-hidden="true">Menu</span><svg class="h" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="x" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+    </nav>
+  </div>
+</header>
+
+<div class="microbar">
+  <div class="wrap">Not connected with or endorsed by the United States government or the federal Medicare program.</div>
+</div>
+<main id="main">
+<section class="banner">
+  <div class="wrap">
+    <h1>Terms &amp; Conditions</h1>
+    <div class="meta"><span>Last updated: 28 Aug 2026</span><span>Poshnee Tech LLC</span></div>
+  </div>
+</section>
+
+<div class="legal">
+  <div class="wrap">
+    <nav class="toc" aria-label="On this page"><div class="h">On this page</div><ol><li><a href="#acceptance">Acceptance of these terms</a></li><li><a href="#what-we-do">What this service is &mdash; and is not</a></li><li><a href="#eligibility">Eligibility to use this site</a></li><li><a href="#consent-terms">Consent to be contacted</a></li><li><a href="#your-info">Accuracy of the information you provide</a></li><li><a href="#third-party">Licensed agents and third parties</a></li><li><a href="#acceptable-use">Acceptable use</a></li><li><a href="#ip">Intellectual property</a></li><li><a href="#disclaimer">Disclaimer of warranties</a></li><li><a href="#liability">Limitation of liability</a></li><li><a href="#indemnity">Indemnification</a></li><li><a href="#governing-law">Governing law and disputes</a></li><li><a href="#arbitration">Arbitration and dispute resolution</a></li><li><a href="#changes-terms">Changes to these terms</a></li><li><a href="#contact-terms">Contact</a></li></ol></nav>
+    <div class="prose"><section id="acceptance"><h2>Acceptance of these terms</h2>
+<p>These Terms &amp; Conditions govern your use of OptimalHealthChoices.com, operated by Poshnee Tech LLC. By using this website or submitting the form on it, you agree to these terms. If you do not agree, please do not use the site.</p>
+</section><section id="what-we-do"><h2>What this service is &mdash; and is not</h2>
+<p>We are a Third-Party Marketing Organization. We connect people who are Medicare-eligible, or approaching eligibility, with licensed insurance agents.</p>
+<ul>
+  <li><strong>We do not sell insurance.</strong> We are not an insurance company, agency, or producer of record for any policy.</li>
+  <li><strong>We do not enroll you in anything.</strong> No enrollment can occur through this website.</li>
+  <li><strong>We do not give insurance, medical, tax, or legal advice.</strong> Information on this site is general and educational.</li>
+  <li><strong>We do not represent every plan.</strong> See the multi-plan disclaimer at the foot of every page.</li>
+</ul>
+<p>Poshnee Tech LLC and the licensed agents it works with are not connected with or endorsed by the United States government or the federal Medicare program. For official information about all of your options, contact Medicare.gov or 1-800-MEDICARE.</p>
+</section><section id="eligibility"><h2>Eligibility to use this site</h2>
+<p>You must be at least 18 years old and located in the United States to use this website. By submitting the form you confirm that you are providing your own information, or that you have the legal authority to act on behalf of the person whose information you provide.</p>
+</section><section id="consent-terms"><h2>Consent to be contacted</h2>
+<p>The form on this site includes a separate, unchecked consent checkbox. By checking it and submitting, you give prior express written consent to be contacted by the single licensed insurance agency named in that consent language, at the telephone number you provided.</p>
+<ul>
+  <li>Contact may be made by automatic telephone dialing system, artificial or prerecorded voice, and/or SMS text message.</li>
+  <li><strong>Consent is not a condition of purchasing any product or service.</strong></li>
+  <li>Message and data rates may apply. Message frequency varies. Reply STOP to opt out, HELP for help.</li>
+  <li>You may speak with a licensed agent without giving consent by calling (833) 690-5085 (TTY 711).</li>
+  <li>You may withdraw consent at any time, by any reasonable method, and we will honor it across all channels.</li>
+</ul>
+<p>The exact consent wording shown to you is recorded with your submission, together with a third-party consent certificate. See the <a href="privacy.html#session-recording">Privacy Policy</a> for how that works.</p>
+</section><section id="your-info"><h2>Accuracy of the information you provide</h2>
+<p>You agree that the information you submit is accurate and that the telephone number you give is a number you own or are authorized to provide. Submitting another person's telephone number without their permission is a misuse of this service and may violate federal and state law.</p>
+</section><section id="third-party"><h2>Licensed agents and third parties</h2>
+<p>Licensed insurance agents and agencies are independent third parties. They are not our employees or agents, and we do not control their conduct, licensing, advice, or the terms of any policy they present to you.</p>
+<p>Any transaction you enter into with an agent or insurance company is between you and that party. We are not responsible for their acts or omissions. If an agent contacts you who was not named in the consent you gave, please report it to info@poshnee.com.</p>
+<p>This site may link to third-party websites. We do not control and are not responsible for their content or privacy practices.</p>
+</section><section id="acceptable-use"><h2>Acceptable use</h2>
+<p>You agree not to:</p>
+<ul>
+  <li>Submit false, misleading, or another person's information without authorization</li>
+  <li>Use automated means to submit forms, scrape, or overload the site</li>
+  <li>Attempt to gain unauthorized access to any part of the site or its systems</li>
+  <li>Interfere with the operation or security of the site</li>
+  <li>Use the site for any unlawful purpose</li>
+</ul>
+</section><section id="ip"><h2>Intellectual property</h2>
+<p>The content, layout, design, and code of this website are owned by Poshnee Tech LLC or its licensors and are protected by intellectual property law. You may view and print pages for your own personal, non-commercial use. You may not reproduce, distribute, or create derivative works without written permission.</p>
+</section><section id="disclaimer"><h2>Disclaimer of warranties</h2>
+<p>This website and the service are provided "as is" and "as available," without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose, and non-infringement. We do not warrant that the site will be uninterrupted or error-free, or that any information on it is complete or current.</p>
+<p>Plan availability, benefits, and terms vary by county and by plan year and are determined solely by the insurance company offering the plan.</p>
+</section><section id="liability"><h2>Limitation of liability</h2>
+<p>To the fullest extent permitted by law, Poshnee Tech LLC and its officers, members, employees, and vendors will not be liable for any indirect, incidental, special, consequential, exemplary, or punitive damages, or for lost profits or lost data, arising out of or relating to your use of this website or the service, whether based in contract, tort, or any other theory, even if advised of the possibility of such damages.</p>
+<p>Where liability cannot be excluded, our total aggregate liability is limited to one hundred U.S. dollars ($100). Some jurisdictions do not allow certain exclusions, so some of these limitations may not apply to you.</p>
+</section><section id="indemnity"><h2>Indemnification</h2>
+<p>You agree to indemnify and hold harmless Poshnee Tech LLC and its officers, members, employees, and vendors from any claim, demand, loss, or expense, including reasonable legal fees, arising from your breach of these terms, your misuse of the site, or your submission of information you were not authorized to provide.</p>
+</section><section id="governing-law"><h2>Governing law and disputes</h2>
+<p>These terms are governed by the laws of the State of Texas, without regard to conflict-of-law rules. Any dispute arising out of these terms or your use of the site will be brought exclusively in the state or federal courts located in Travis County, Texas, and you consent to the jurisdiction of those courts.</p>
+</section><section id="arbitration"><h2>Arbitration and dispute resolution</h2>
+<div class="note"><p><strong>Please read this section carefully. It affects how disputes between you and us are resolved, and it limits your ability to bring or take part in a class action.</strong></p></div>
+<p>Any dispute, claim, or controversy arising out of or relating to these Terms of Use or your use of the website shall be resolved through binding individual arbitration in accordance with applicable law.</p>
+<p>The arbitration shall be conducted by a mutually agreed arbitration provider and governed by its applicable consumer arbitration rules.</p>
+<p>You agree that disputes will be resolved on an individual basis only and waive any right to participate in a class action or class-wide arbitration, to the extent permitted by law.</p>
+<p>Nothing in this section prevents either party from seeking temporary injunctive or equitable relief in a court of competent jurisdiction where necessary.</p>
+</section><section id="changes-terms"><h2>Changes to these terms</h2>
+<p>We may revise these terms from time to time. The "last updated" date reflects the most recent revision. Continued use of the site after a change constitutes acceptance of the revised terms.</p>
+</section><section id="contact-terms"><h2>Contact</h2>
+<p><strong>Poshnee Tech LLC</strong><br>
+5900 Balcones Drive, STE 100, Austin, TX 78731<br>
+Email: info@poshnee.com<br>
+Phone: (833) 690-5085 (TTY 711)<br>
+Hours: Mon–Fri, 9:00 AM–9:00 PM ET</p>
+</section></div>
+  </div>
+</div>
+
+<section class="disc" aria-labelledby="disc-h">
+  <div class="wrap">
+    <h2 id="disc-h">Disclosures</h2>
+    <p class="dsub">Important information about this website, the agencies we work with, and your privacy rights.</p>
+
+    <div class="clause key">
+      <h3>Multi-plan disclaimer</h3>
+      <p>We do not offer every plan available in your area. Currently we represent [insert number of organizations] organizations which offer [insert number of plans] products in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.</p>
+    </div>
+    <div class="clause"><h3>Plan type and contract renewal</h3><p>Participating sales agencies represent Medicare Advantage [HMO, PPO, PFFS — list only the types actually represented] organizations and stand-alone prescription drug plans with a Medicare contract. Enrollment in any plan depends on contract renewal.</p></div>
+    <div class="clause"><h3>Non-discrimination</h3><p>Poshnee Tech LLC does not discriminate on the basis of race, color, national origin, disability, age, sex, or religion.</p></div>
+    <div class="clause"><h3>Enrollment period limitation</h3><p>Enrollment in the described plan type may be limited to certain times of the year unless you qualify for a Special Enrollment Period or are in your Medicare Initial Election Period.</p></div>
+    <div class="clause"><h3>Solicitation and government affiliation</h3><p>This is a solicitation for insurance by Poshnee Tech LLC, a private entity that connects Medicare-eligible individuals with licensed insurance agents who can help them understand and compare Medicare Advantage, Special Needs Plan, and related coverage options available in their area. Poshnee Tech LLC and the licensed agents it works with are not connected with or endorsed by the United States government or the federal Medicare program. Not all agents are licensed to sell all products in all states. Not all plans are available in all areas.</p></div>
+    <div class="clause"><h3>Website data collection</h3><p>By using this website, you consent to the real-time collection, storage, use, and share of information on your device, or provided by you (such as mouse movements and clicks) for OptimalHealthChoices.com / Poshnee Tech LLC and/or its third-party providers. See our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a> for more information. You also understand that we will assist in plan shopping by connecting you with a third-party Licensed Insurance Agent.</p></div>
+    <div class="clause"><h3>Privacy rights</h3><p>We are committed to protecting your privacy. If you are a resident of a state that provides these rights, you may opt out of the sale or sharing of your personal information. Please visit <a href="do-not-sell.html">Do Not Sell or Share My Personal Information</a> or see our <a href="privacy.html">Privacy Policy</a> for more details.</p></div>
+  </div>
+</section>
+</main>
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <span class="logo on-dark"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="rgba(255,255,255,.1)"/><path d="M30.46 19.08 A10.5 10.5 0 1 1 24.44 10.48" fill="none" stroke="#DE8A24" stroke-width="3.3" stroke-linecap="round"/><circle cx="28.6" cy="13.98" r="3.5" fill="#DE8A24"/></svg><span class="wm"><span class="l">Optimal</span><span class="h">HealthChoices</span></span></span>
+        <address>
+          <strong>OptimalHealthChoices.com</strong> is owned and operated by <strong>Poshnee Tech LLC</strong><br>
+          5900 Balcones Drive, STE 100, Austin, TX 78731<br>
+          <a href="tel:+18336905085">(833) 690-5085</a> (TTY 711) · <a href="mailto:info@poshnee.com">info@poshnee.com</a><br>
+          Hours: Mon–Fri, 9:00 AM–9:00 PM ET
+        </address>
+      </div>
+      <div class="links">
+        <span class="h">Site</span>
+        <a href="index.html#how">How It Works</a>
+        <a href="index.html#coverage">Coverage Types</a>
+        <a href="index.html#periods">Enrollment Periods</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div class="links">
+        <span class="h">Legal</span>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms &amp; Conditions</a>
+        <a href="do-not-sell.html">Do Not Sell or Share My Personal Information</a>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 Poshnee Tech LLC. All rights reserved.</span>
+      <span class="smid">[SMID / MULTI-PLAN_MATERIAL_ID — assigned by IFG upon approval]</span>
+    </div>
+  </div>
+</footer>
+<!-- TrustedForm — replace with the exact snippet from your ActiveProspect dashboard.
+     Must fire on initial page load, before the form is reachable. Never deferred,
+     never gated behind a cookie banner. -->
+<script type="text/javascript">
+(function(){
+  var tf=document.createElement('script');tf.type='text/javascript';tf.async=true;
+  tf.src=('https:'==document.location.protocol?'https':'http')+
+    '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&l='+
+    new Date().getTime()+Math.random();
+  var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(tf,s);
+})();
+</script>
+<noscript><img src="https://api.trustedform.com/ns.gif" alt=""></noscript>
+
+<script>
+(function(){
+  var b=document.querySelector('.menu-btn'),l=document.getElementById('primary-links');
+  if(b&&l){
+    var set=function(o){b.setAttribute('aria-expanded',o?'true':'false');l.classList.toggle('open',o);};
+    b.addEventListener('click',function(){set(b.getAttribute('aria-expanded')!=='true');});
+    document.addEventListener('click',function(e){if(!e.target.closest('.nav'))set(false);});
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape'&&b.getAttribute('aria-expanded')==='true'){set(false);b.focus();}
+    });
+    l.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  }
+  // Landing on a page with a #fragment: a smooth-scrolling document can silently drop the
+  // browser's own jump when late-loading web fonts reflow the page, leaving the visitor at
+  // the top. Re-apply it once layout has settled. scrollIntoView honours scroll-padding-top,
+  // so the sticky header never covers the heading.
+  if(location.hash.length>1){
+    var target=document.getElementById(location.hash.slice(1));
+    if(target){
+      // 'instant', not 'auto': 'auto' defers to the CSS scroll-behavior (smooth here),
+      // and a smooth scroll started during load is cancelled, leaving the visitor at the top.
+      var jump=function(){target.scrollIntoView({behavior:'instant',block:'start'});};
+      jump();
+      window.addEventListener('load',function(){setTimeout(jump,0);});
+      if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){setTimeout(jump,0);});
+    }
+  }
+
+  // Format US phone numbers as the visitor types: (555) 555-0123.
+  // A leading country code is dropped first, so a pasted or autofilled
+  // "+1 555 555 0123" cannot be truncated into a different, dialable number.
+  [].forEach.call(document.querySelectorAll('input[type=tel]'),function(i){
+    i.addEventListener('input',function(){
+      var d=i.value.replace(/\D/g,'');
+      if(d.length===11&&d.charAt(0)==='1')d=d.slice(1);
+      d=d.slice(0,10);
+      var o=d;
+      if(d.length>6)o='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6);
+      else if(d.length>3)o='('+d.slice(0,3)+') '+d.slice(3);
+      else if(d.length>0)o='('+d;
+      i.value=o;
+    });
+  });
+})();
+</script>
+</body>
+</html>

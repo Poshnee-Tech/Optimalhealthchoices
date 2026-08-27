@@ -1,0 +1,10 @@
+# Server-side files for the PHP host — must never be published on Vercel
+*.php
+.htaccess
+# Internal docs and tooling
+*.md
+scripts/
+placeholders.json
+placeholders.example.json
+_*.html
+.gitignore

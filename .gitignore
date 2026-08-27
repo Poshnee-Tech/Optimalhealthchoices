@@ -1,0 +1,5 @@
+config.php
+.vercel
+.DS_Store
+node_modules
+placeholders.json

@@ -1,0 +1,18 @@
+{
+  "_comment": "Copy to placeholders.json, fill EVERY value, then run: python3 scripts/fill.py --write. Keys are matched literally, including the brackets. Values left empty are reported as errors rather than published — do not put a guess here.",
+  "[TEL]": "1-800-000-0000",
+  "[EMAIL]": "privacy@optimalhealthchoices.com",
+  "[DAYS]": "Monday–Friday",
+  "[HOURS]": "8 a.m.–8 p.m.",
+  "[TIME ZONE]": "ET",
+  "[DATE]": "September 1, 2026",
+  "[FULL STREET ADDRESS — physical, not a PO box]": "123 Main Street, Suite 100, City, ST 00000",
+  "[NAMED AGENCY]": "Example Insurance Agency LLC",
+  "[NAMED AGENCY — LEGAL ENTITY NAME]": "Example Insurance Agency LLC",
+  "[HMO, PPO, PFFS — list only the types actually represented]": "HMO and PPO",
+  "[insert number of organizations]": "",
+  "[insert number of plans]": "",
+  "[STATE]": "Texas",
+  "[COUNTY, STATE]": "Harris County, Texas",
+  "[SMID / MULTI-PLAN_MATERIAL_ID — assigned by IFG upon approval]": ""
+}

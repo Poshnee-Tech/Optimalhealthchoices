@@ -1,0 +1,59 @@
+# OptimalHealthChoices — Hostinger / Apache
+Options -Indexes
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Force HTTPS (the X-Forwarded-Proto check keeps this correct behind a CDN or proxy)
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Form endpoints (same paths the HTML posts to on Vercel)
+  RewriteRule ^submit$ submit.php [L]
+  RewriteRule ^privacy-request$ privacy-request.php [L]
+
+  # Clean URLs: /privacy → privacy.html
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME}\.html -f
+  RewriteRule ^([^.]+)$ $1.html [L]
+
+  # /index.html → /   (must come first: the generic rule below would send it to /index)
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+  RewriteRule ^ / [R=301,L]
+
+  # /privacy.html → /privacy (canonical)
+  RewriteCond %{THE_REQUEST} \s/(?!index)([^/\s]+)\.html[\s?] [NC]
+  RewriteRule ^ /%1 [R=301,L]
+</IfModule>
+
+ErrorDocument 404 /404.html
+
+# Block the scripts/ helper directory from the web
+RedirectMatch 404 ^/scripts/
+
+# Never serve helpers or config directly
+<FilesMatch "^(_forward\.php|config\.php|config\.example\.php|placeholders.*\.json|HANDOFF\.md|DEPLOY\.md|vercel\.json|package\.json|\.gitignore|_.*\.html)$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+  Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains"
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/x-icon "access plus 1 month"
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/css application/javascript application/json image/svg+xml
+</IfModule>

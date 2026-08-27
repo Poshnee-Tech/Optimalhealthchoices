@@ -1,0 +1,9 @@
+{
+  "name": "optimalhealthchoices-site",
+  "private": true,
+  "description": "Static Medicare lead-gen site — five self-contained HTML pages plus optional form endpoints for Vercel (api/) and PHP hosts (*.php).",
+  "scripts": {
+    "dev": "python3 scripts/dev_server.py 8080",
+    "check": "python3 scripts/check.py"
+  }
+}

@@ -197,14 +197,6 @@ input.bad,select.bad{border-color:var(--error)}
 /* Indented to the checkbox's text column so the disclosure lines up under the
    consent it belongs to, and the +/- marker sits beside the words rather than
    drifting to the far edge of the box. */
-.consent-more{border-bottom:0;margin:.2rem 0 0 calc(24px + .85rem)}
-.consent-more summary{display:inline-flex;align-items:center;position:relative;
-  padding:.3rem 1.3rem .3rem 0;min-height:44px;
-  font-size:var(--fs-sm);font-weight:700;color:var(--plum-3);text-decoration:underline}
-.consent-more summary::after{right:.15rem;width:11px;background:var(--plum-3)}
-.consent-more summary::before{right:5.15px;height:11px;background:var(--plum-3)}
-.consent-more .ans{font-size:var(--fs-legal);line-height:1.55;color:var(--ink);
-  padding:0 0 .35rem}
 
 /* consent: >=12pt, full contrast, normal flow, never scroll-boxed */
 .consent{border:1.5px solid var(--line);border-radius:var(--r-md);background:var(--paper);
@@ -532,15 +524,9 @@ summary:hover{color:var(--plum-3)}
           <div class="check">
             <input type="checkbox" id="consent1" name="consent_contact" data-tf-element-reference="consent-to-contact">
             <label for="consent1" id="consentText">
-              By checking this box and clicking "See My Options," I give my prior express written consent to be contacted by <strong>InsureMe, Inc.</strong>, a licensed insurance agency, at the telephone number I provided above &mdash; including by automatic telephone dialing system, artificial or prerecorded voice, and/or SMS text message &mdash; about Medicare Advantage, Medicare Supplement, Prescription Drug, and other insurance products. My consent is <strong>not a condition of purchasing any product or service</strong>.
+              By selecting the check box, you represent that you are 18+ years of age and agree to the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>. All TCPA claims will be handled in accordance with binding arbitration as specified in the Terms &amp; Conditions. This Agreement to Arbitrate includes, but is not limited to, claims arising under the Telemarketing Consumer Protection Act 47 U.S.C. &sect; 227 or any other telemarketing regulations brought against the website&rsquo;s customers and/or anyone involved in the initiation or generation of telemarketing calls based on information submitted to the website. By selecting the above check box you give your electronic signature and provide your express written consent via this chat / webform to receive marketing communications regarding insurance products and services via live, automated dialing systems, AI generative voice calls, prerecorded messages, automated voice calls, prerecorded voicemails, telephone calls, text, or email interaction from a licensed insurance sales agent associated with <strong>OptimalHealthChoices.com</strong> and it&rsquo;s <a href="marketing-partners.html">Marketing Partners</a> at the phone number provided by you, including wireless numbers, if applicable, even if you have previously registered the provided number on the Do Not Call Registry. Carrier call rates may apply. <strong>Your consent is not required to get a plan review or make a purchase.</strong> Your consent can be revoked at any time for any reason by contacting us at <a href="mailto:info@poshnee.com">info@poshnee.com</a>. Products and services include Medicare Supplement, Medicare Advantage, Prescription Drug insurance plans, and other health-related services. This is a solicitation for insurance. I understand this request has been initiated by me and is an unscheduled contact request. I further understand that this request, initiated by me, is my affirmative consent to be contacted which is in compliance with all federal and state telemarketing and Do-Not-Call laws.
             </label>
           </div>
-          <details class="consent-more">
-            <summary>Read the full consent</summary>
-            <div class="ans" id="consentRest">
-              Message and data rates may apply. Message frequency varies. I may reply STOP to opt out of text messages or HELP for help. I understand I may revoke this consent at any time. I may also speak with a licensed agent without giving consent by calling <strong>(833) 690-5085</strong> (TTY 711).
-            </div>
-          </details>
           <p class="err" id="e-consent1" role="alert">You must check this box to be contacted by an agent.</p>
           <hr class="consent-rule">
           <div class="check">
@@ -630,17 +616,6 @@ summary:hover{color:var(--plum-3)}
   </div>
 </section>
 
-<section class="section alt" style="padding-block:clamp(2.5rem,4vw,3.5rem)">
-  <div class="wrap">
-    <div class="langbox">
-      <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 10h15M10 2.5c2 2.4 2 12.6 0 15M10 2.5C8 4.9 8 15.1 10 17.5" stroke="currentColor" stroke-width="1.7"/></svg></span>
-      <div>
-        <p>Language assistance services are available at no cost. Call <strong>(833) 690-5085</strong> (TTY 711).</p>
-        <p lang="es">Servicios de asistencia lingüística disponibles sin costo. Llame al <strong>(833) 690-5085</strong> (TTY 711).</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="disc" aria-labelledby="disc-h">
   <div class="wrap">
@@ -684,6 +659,7 @@ summary:hover{color:var(--plum-3)}
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms &amp; Conditions</a>
         <a href="do-not-sell.html">Do Not Sell or Share My Personal Information</a>
+        <a href="marketing-partners.html">Marketing Partners</a>
       </div>
     </div>
     <div class="bottom">
@@ -769,7 +745,7 @@ summary:hover{color:var(--plum-3)}
   form.addEventListener('submit',function(e){
     if(sending){e.preventDefault();return;}
     if(!validate()){e.preventDefault();focusBad();return;}
-    g('consentTextRendered').value=(g('consentText').textContent+' '+g('consentRest').textContent)
+    g('consentTextRendered').value=(g('consentText').textContent)
       .replace(/\s+/g,' ').trim();
     g('submittedAt').value=new Date().toISOString();
     sending=true;

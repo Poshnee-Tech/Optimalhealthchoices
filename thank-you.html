@@ -290,12 +290,6 @@ details[open] summary::before{transform:translateY(-50%) scaleY(0)}
 summary:hover{color:var(--plum-3)}
 .ans{padding:0 0 1.4rem;color:var(--muted);font-size:var(--fs-legal);max-width:62ch}
 
-.langbox{display:grid;grid-template-columns:auto 1fr;gap:1.25rem;background:var(--amber-soft);
-  border:1px solid var(--amber-line);border-radius:var(--r-md);padding:1.6rem}
-.langbox .ic{width:42px;height:42px;border-radius:11px;background:var(--amber);
-  display:grid;place-items:center;color:#fff;flex:none}
-.langbox p{font-size:var(--fs-legal);margin-bottom:.4rem;color:#4A3208}
-.langbox p:last-child{margin-bottom:0;color:#6B4C15}
 
 /* --- legal prose pages --- */
 .legal{padding-block:var(--stack)}
@@ -391,7 +385,6 @@ html:not(.js) .nojs-note{display:block}
   .foot .top{grid-template-columns:1fr;gap:2rem}
   .row2,.btnrow{grid-template-columns:1fr}
   .card{max-width:none}
-  .langbox{grid-template-columns:1fr}
 }
 @media (max-width:560px){
   .masthead .wrap{gap:.6rem}
@@ -474,17 +467,6 @@ html:not(.js) .nojs-note{display:block}
   </div>
 </section>
 
-<section class="section alt" style="padding-block:clamp(2.5rem,4vw,3.5rem)">
-  <div class="wrap">
-    <div class="langbox">
-      <span class="ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7.5" stroke="currentColor" stroke-width="1.7"/><path d="M2.5 10h15M10 2.5c2 2.4 2 12.6 0 15M10 2.5C8 4.9 8 15.1 10 17.5" stroke="currentColor" stroke-width="1.7"/></svg></span>
-      <div>
-        <p>Language assistance services are available at no cost. Call <strong>(833) 690-5085</strong> (TTY 711).</p>
-        <p lang="es">Servicios de asistencia lingüística disponibles sin costo. Llame al <strong>(833) 690-5085</strong> (TTY 711).</p>
-      </div>
-    </div>
-  </div>
-</section>
 
 <section class="disc" aria-labelledby="disc-h">
   <div class="wrap">

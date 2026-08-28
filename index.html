@@ -137,10 +137,10 @@ a:hover{color:var(--plum)}
 .hero .wrap{position:relative;z-index:1;display:grid;
   grid-template-columns:minmax(0,1fr) minmax(370px,430px);
   gap:clamp(2rem,4vw,3.5rem);align-items:start;padding-block:clamp(2.5rem,4.5vw,4.25rem)}
-.hero h1{font-size:clamp(2rem,3.5vw,3.1rem);letter-spacing:-.038em;font-weight:800;
+.hero h1{font-size:clamp(2.35rem,4.4vw,3.8rem);letter-spacing:-.038em;font-weight:800;line-height:1.02;
   max-width:16ch;margin-bottom:1.1rem;text-wrap:balance}
 .hero h1 em{font-style:normal;color:var(--amber)}
-.hero .sub{font-size:1.08rem;color:var(--on-dark-2);max-width:44ch;margin-bottom:1.75rem;line-height:1.55}
+.hero .sub{font-size:1.18rem;color:var(--on-dark-2);max-width:44ch;margin-bottom:1.75rem;line-height:1.55}
 .hero .lead{position:sticky;top:calc(76px + 2rem);align-self:start}
 .callbox{display:flex;gap:1rem;align-items:flex-start;margin-top:2.25rem;padding:1.15rem 1.25rem;max-width:34rem;
   border:1px solid rgba(255,255,255,.12);border-radius:var(--r-md);background:rgba(255,255,255,.05)}
@@ -169,19 +169,14 @@ a:hover{color:var(--plum)}
 /* --- form card --- */
 .card{background:var(--surface);border-radius:var(--r-lg);box-shadow:var(--sh-3);
       padding:clamp(1.35rem,1.9vw,1.75rem);color:var(--ink);scroll-margin-top:100px}
-.card h2{font-size:1.32rem;margin-bottom:.3rem}
-.card .lede{font-size:var(--fs-sm);color:var(--muted);margin-bottom:1.25rem;line-height:1.5}
-.prog{margin-bottom:1.25rem}
-.prog .meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.55rem}
-.prog .now{font-size:var(--fs-sm);font-weight:700}
-.prog .cnt{font-size:var(--fs-micro);font-weight:600;color:var(--muted)}
-.bar{height:5px;background:var(--line-2);border-radius:var(--r-pill);overflow:hidden}
-.bar i{display:block;height:100%;width:33.33%;background:var(--amber);transition:width .4s cubic-bezier(.4,0,.2,1)}
-
+.card h2{font-size:1.6rem;font-weight:800;margin-bottom:.3rem}
+.card .lede{font-size:1rem;color:var(--muted);margin-bottom:1.25rem;line-height:1.5}
 fieldset{border:0;padding:0;margin:0 0 1.25rem}
-legend{font-size:var(--fs-legal);font-weight:700;padding:0;margin-bottom:.65rem;line-height:1.4}
+legend{font-size:1rem;font-weight:700;padding:0;margin-bottom:.65rem;line-height:1.4}
 .field{margin-bottom:.9rem}
-.field label{display:block;font-size:var(--fs-sm);font-weight:700;margin-bottom:.4rem;color:var(--ink-2)}
+.field:has(select){margin-bottom:1.3rem}
+.field:has(select) label{line-height:1.4;margin-bottom:.5rem}
+.field label{display:block;font-size:1rem;font-weight:700;margin-bottom:.4rem;color:var(--ink-2)}
 .hint{display:block;font-size:var(--fs-sm);color:var(--muted);margin-top:.45rem;line-height:1.5}
 input[type=text],input[type=tel],input[type=email],select,textarea{
   width:100%;font-family:var(--ui);font-size:var(--fs-legal);font-weight:500;
@@ -196,15 +191,20 @@ input:focus,select:focus,textarea:focus{outline:none;border-color:var(--plum-3);
 input.bad,select.bad{border-color:var(--error)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:.85rem}
 
-.choices{display:grid;gap:.5rem}
-.choice{display:flex;align-items:center;gap:.85rem;cursor:pointer;
-  border:1.5px solid var(--field);border-radius:var(--r-sm);background:var(--surface);
-  padding:.75rem 1rem;min-height:54px;font-size:var(--fs-legal);font-weight:600;color:var(--ink-2);
-  transition:border-color .15s,background .15s}
-.choice:hover{border-color:var(--field-hover);background:var(--paper)}
-.choice input{width:22px;height:22px;accent-color:var(--plum-3);margin:0;flex:none}
-.choice:has(input:checked){border-color:var(--plum-3);background:var(--paper-2);color:var(--ink)}
-.choice:has(input:focus-visible){outline:3px solid var(--amber);outline-offset:2px}
+/* Consent disclosure. The operative sentence is always visible; only the
+   supporting detail collapses. It stays in the DOM either way, so TrustedForm
+   certifies it and consent_text_rendered records it in full. */
+/* Indented to the checkbox's text column so the disclosure lines up under the
+   consent it belongs to, and the +/- marker sits beside the words rather than
+   drifting to the far edge of the box. */
+.consent-more{border-bottom:0;margin:.2rem 0 0 calc(24px + .85rem)}
+.consent-more summary{display:inline-flex;align-items:center;position:relative;
+  padding:.3rem 1.3rem .3rem 0;min-height:44px;
+  font-size:var(--fs-sm);font-weight:700;color:var(--plum-3);text-decoration:underline}
+.consent-more summary::after{right:.15rem;width:11px;background:var(--plum-3)}
+.consent-more summary::before{right:5.15px;height:11px;background:var(--plum-3)}
+.consent-more .ans{font-size:var(--fs-legal);line-height:1.55;color:var(--ink);
+  padding:0 0 .35rem}
 
 /* consent: >=12pt, full contrast, normal flow, never scroll-boxed */
 .consent{border:1.5px solid var(--line);border-radius:var(--r-md);background:var(--paper);
@@ -213,6 +213,7 @@ input.bad,select.bad{border-color:var(--error)}
   color:var(--amber-deep);margin-bottom:1rem}
 .check{display:flex;gap:.85rem;align-items:flex-start;margin-bottom:1.15rem}
 .check:last-of-type{margin-bottom:0}
+.consent-rule{border:0;border-top:1px solid var(--line);margin:1rem 0}
 .check input{width:24px;height:24px;margin:2px 0 0;accent-color:var(--plum-3);flex:none;cursor:pointer}
 .check label{font-size:var(--fs-legal);line-height:1.55;cursor:pointer;color:var(--ink)}
 .check strong{font-weight:700}
@@ -233,8 +234,6 @@ input.bad,select.bad{border-color:var(--error)}
 .card-note{grid-column:2;margin-top:1.15rem;font-size:var(--fs-legal);line-height:1.6;
   color:#EDE4EF;max-width:430px}
 .card-note strong{color:#fff;font-weight:700}
-.step{animation:in .3s cubic-bezier(.4,0,.2,1)}
-@keyframes in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
 
 /* --- "after you submit" band --- */
 .next{background:var(--plum-2);color:#F3ECF4;border-top:1px solid rgba(255,255,255,.08)}
@@ -354,14 +353,6 @@ summary:hover{color:var(--plum-3)}
 .smid{border:1px dashed rgba(255,255,255,.28);border-radius:var(--r-sm);padding:.45rem .85rem;
   color:var(--on-dark);font-size:var(--fs-sm)}
 
-/* --- progressive enhancement: all steps render without JS --- */
-.js .step[hidden]{display:none}
-.step[hidden]{display:block}
-/* Without JS the progress bar and the step buttons are meaningless — every step is already visible. */
-html:not(.js) .prog,html:not(.js) [data-next],html:not(.js) [data-back]{display:none}
-html:not(.js) .nojs-note{display:block}
-.nojs-note{display:none;font-size:var(--fs-sm);color:var(--muted);margin:-.4rem 0 1.1rem;line-height:1.5}
-
 /* --- responsive --- */
 @media (max-width:1040px){
   .hero .wrap{grid-template-columns:1fr;gap:2.25rem;align-items:start}
@@ -470,109 +461,97 @@ html:not(.js) .nojs-note{display:block}
 
     <div class="card" id="form">
       <h2>Get Started &mdash; See Your Options</h2>
-      <p class="lede">Takes about a minute. A licensed agent will follow up to review the plans available in your area.</p>
+      <p class="lede">One short form &mdash; takes about a minute. A licensed agent will follow up to review the plans available in your area.</p>
 
-      <div class="prog">
-        <div class="meta" aria-live="polite"><span class="now" id="stepLabel">About You</span><span class="cnt" id="stepCount">Step 1 of 3</span></div>
-        <div class="bar"><i id="bar"></i></div>
-      </div>
-
-      <p class="nojs-note">JavaScript is turned off, so all three sections are shown at once. Fill them in and choose <strong>See My Options</strong> at the end.</p>
-        <form id="leadForm" method="post" action="/submit" novalidate>
-        <input type="hidden" id="xxTrustedFormCertUrl" name="xxTrustedFormCertUrl">
-        <input type="hidden" id="xxTrustedFormCertToken" name="xxTrustedFormCertToken">
-        <input type="hidden" id="xxTrustedFormPingUrl" name="xxTrustedFormPingUrl">
+      <form id="leadForm" method="post" action="submit.php" novalidate>
+        <input type="hidden" id="trusted" name="trusted">
         <input type="hidden" name="consent_text_rendered" id="consentTextRendered">
-        <input type="hidden" name="page_url" id="pageUrl">
         <input type="hidden" name="submitted_at" id="submittedAt">
         <!-- Anti-spam trap. Never shown, never autofilled: the name and label match no
              browser autofill heuristic. A real visitor always submits this empty. -->
         <div class="hp" aria-hidden="true"><label for="ohc-leave-empty">Leave this field empty</label><input type="text" id="ohc-leave-empty" name="ohc_leave_empty" tabindex="-1" autocomplete="off" data-lpignore="true" data-form-type="other"></div>
 
-        <div class="step" data-step="1">
-          <div class="row2">
-            <div class="field">
-              <label for="fname">First name</label>
-              <input type="text" id="fname" name="first_name" autocomplete="given-name" required>
-              <p class="err" id="e-fname" role="alert">Enter your first name.</p>
-            </div>
-            <div class="field">
-              <label for="lname">Last name</label>
-              <input type="text" id="lname" name="last_name" autocomplete="family-name" required>
-              <p class="err" id="e-lname" role="alert">Enter your last name.</p>
-            </div>
+        <div class="row2">
+          <div class="field">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="first_name" autocomplete="given-name" required>
+            <p class="err" id="e-fname" role="alert">Enter your first name.</p>
           </div>
           <div class="field">
-            <label for="zip">ZIP code</label>
-            <input type="text" id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="12345" required>
-            <p class="err" id="e-zip" role="alert">Enter a 5-digit ZIP code.</p>
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="last_name" autocomplete="family-name" required>
+            <p class="err" id="e-lname" role="alert">Enter your last name.</p>
           </div>
-          <div class="field">
-            <label for="phone">Phone number</label>
-            <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(555) 555-0123" required>
-            <span class="hint">We'll use this number to have a licensed agent contact you.</span>
-            <p class="err" id="e-phone" role="alert">Enter a 10-digit US phone number.</p>
-          </div>
-          <button type="button" class="btn" data-next="2">Continue</button>
+        </div>
+        <div class="field">
+          <label for="zip">ZIP code</label>
+          <input type="text" id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" placeholder="12345" required>
+          <p class="err" id="e-zip" role="alert">Enter a 5-digit ZIP code.</p>
+        </div>
+        <div class="field">
+          <label for="phone">Phone number</label>
+          <input type="tel" id="phone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(555) 555-0123" required>
+          <span class="hint">We'll use this number to have a licensed agent contact you.</span>
+          <p class="err" id="e-phone" role="alert">Enter a 10-digit US phone number.</p>
         </div>
 
-        <div class="step" data-step="2" hidden>
-          <fieldset>
-            <legend>Which best describes you?</legend>
-            <div class="choices">
-              <label class="choice"><input type="radio" name="age_band" value="65_plus"> I'm 65 or older</label>
-              <label class="choice"><input type="radio" name="age_band" value="turning_65"> I'm turning 65 soon</label>
-              <label class="choice"><input type="radio" name="age_band" value="under_65"> I'm under 65</label>
-            </div>
-            <p class="err" id="e-age" role="alert">Choose one option.</p>
-          </fieldset>
-          <fieldset>
-            <legend>Are you currently enrolled in Medicare Part A and Part B?</legend>
-            <div class="choices">
-              <label class="choice"><input type="radio" name="parts_ab" value="yes"> Yes</label>
-              <label class="choice"><input type="radio" name="parts_ab" value="no"> No</label>
-              <label class="choice"><input type="radio" name="parts_ab" value="unsure"> Not sure</label>
-            </div>
-            <p class="err" id="e-ab" role="alert">Choose one option.</p>
-          </fieldset>
-          <fieldset>
-            <legend>Do you currently receive Medicaid or state medical assistance?</legend>
-            <div class="choices">
-              <label class="choice"><input type="radio" name="medicaid" value="yes"> Yes</label>
-              <label class="choice"><input type="radio" name="medicaid" value="no"> No</label>
-              <label class="choice"><input type="radio" name="medicaid" value="unsure"> Not sure</label>
-            </div>
-            <span class="hint">This helps the agent identify which types of plans you may be able to consider.</span>
-            <p class="err" id="e-medicaid" role="alert">Choose one option.</p>
-          </fieldset>
-          <div class="btnrow">
-            <button type="button" class="btn ghost" data-back="1">Back</button>
-            <button type="button" class="btn" data-next="3">Continue</button>
-          </div>
+        <div class="field">
+          <label for="age">Which best describes you?</label>
+          <select id="age" name="age_band" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="65_plus">I'm 65 or older</option>
+            <option value="turning_65">I'm turning 65 soon</option>
+            <option value="under_65">I'm under 65</option>
+          </select>
+          <p class="err" id="e-age" role="alert">Choose one option.</p>
+        </div>
+        <div class="field">
+          <label for="partsab">Are you currently enrolled in Medicare Part A and Part B?</label>
+          <select id="partsab" name="parts_ab" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="unsure">Not sure</option>
+          </select>
+          <p class="err" id="e-ab" role="alert">Choose one option.</p>
+        </div>
+        <div class="field">
+          <label for="medicaid">Do you currently receive Medicaid or state medical assistance?</label>
+          <select id="medicaid" name="medicaid" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+            <option value="unsure">Not sure</option>
+          </select>
+          <span class="hint">This helps the agent identify which types of plans you may be able to consider.</span>
+          <p class="err" id="e-medicaid" role="alert">Choose one option.</p>
         </div>
 
-        <div class="step" data-step="3" hidden>
-          <div class="consent">
-            <div class="cap">Consent to contact</div>
-            <div class="check">
-              <input type="checkbox" id="consent1" name="consent_contact" data-tf-element-reference="consent-to-contact">
-              <label for="consent1" id="consentText">
-                By checking this box and clicking "See My Options," I give my prior express written consent to be contacted by a licensed insurance agency at the telephone number I provided above. I understand this contact may be made using an automatic telephone dialing system, artificial or prerecorded voice, and/or SMS text message, and may concern Medicare Advantage, Medicare Supplement, Prescription Drug, and other insurance products. I understand my consent is <strong>not a condition of purchasing any product or service</strong>. Message and data rates may apply. Message frequency varies. I may reply STOP to opt out of text messages or HELP for help. I understand I may revoke this consent at any time. I may also speak with a licensed agent without giving consent by calling <strong>(833) 690-5085</strong> (TTY 711).
-              </label>
-            </div>
-            <p class="err" id="e-consent1" role="alert">You must check this box to be contacted by an agent.</p>
-            <div class="check">
-              <input type="checkbox" id="consent2" name="terms_ack">
-              <label for="consent2">I have read and agree to the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>.</label>
-            </div>
-            <p class="err" id="e-consent2" role="alert">You must agree to the Privacy Policy and Terms.</p>
+        <div class="consent">
+          <div class="cap">Consent to contact</div>
+          <div class="check">
+            <input type="checkbox" id="consent1" name="consent_contact" data-tf-element-reference="consent-to-contact">
+            <label for="consent1" id="consentText">
+              By checking this box and clicking "See My Options," I give my prior express written consent to be contacted by <strong>InsureMe, Inc.</strong>, a licensed insurance agency, at the telephone number I provided above &mdash; including by automatic telephone dialing system, artificial or prerecorded voice, and/or SMS text message &mdash; about Medicare Advantage, Medicare Supplement, Prescription Drug, and other insurance products. My consent is <strong>not a condition of purchasing any product or service</strong>.
+            </label>
           </div>
-          <div class="btnrow">
-            <button type="button" class="btn ghost" data-back="2">Back</button>
-            <button type="submit" class="btn">See My Options</button>
+          <details class="consent-more">
+            <summary>Read the full consent</summary>
+            <div class="ans" id="consentRest">
+              Message and data rates may apply. Message frequency varies. I may reply STOP to opt out of text messages or HELP for help. I understand I may revoke this consent at any time. I may also speak with a licensed agent without giving consent by calling <strong>(833) 690-5085</strong> (TTY 711).
+            </div>
+          </details>
+          <p class="err" id="e-consent1" role="alert">You must check this box to be contacted by an agent.</p>
+          <hr class="consent-rule">
+          <div class="check">
+            <input type="checkbox" id="consent2" name="terms_ack">
+            <label for="consent2">I have read and agree to the <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms &amp; Conditions</a>.</label>
           </div>
-          <p class="reassure">Your information is used to connect you with a licensed insurance agent. We do not sell insurance and we do not enroll you in a plan.</p>
+          <p class="err" id="e-consent2" role="alert">You must agree to the Privacy Policy and Terms.</p>
         </div>
+
+        <button type="submit" class="btn">See My Options</button>
+        <p class="reassure">Your information is used to connect you with a licensed insurance agent. We do not sell insurance and we do not enroll you in a plan.</p>
       </form>
     </div>
 
@@ -672,7 +651,7 @@ html:not(.js) .nojs-note{display:block}
       <h3>Multi-plan disclaimer</h3>
       <p>We do not offer every plan available in your area. Currently we represent [insert number of organizations] organizations which offer [insert number of plans] products in your area. Please contact Medicare.gov or 1-800-MEDICARE to get information on all of your options.</p>
     </div>
-    <div class="clause"><h3>Plan type and contract renewal</h3><p>Participating sales agencies represent Medicare Advantage [HMO, PPO, PFFS — list only the types actually represented] organizations and stand-alone prescription drug plans with a Medicare contract. Enrollment in any plan depends on contract renewal.</p></div>
+    <div class="clause"><h3>Plan type and contract renewal</h3><p>Participating sales agencies represent Medicare Advantage [HMO, PPO, PFFS] organizations and stand-alone prescription drug plans with a Medicare contract. Enrollment in any plan depends on contract renewal.</p></div>
     <div class="clause"><h3>Non-discrimination</h3><p>Poshnee Tech LLC does not discriminate on the basis of race, color, national origin, disability, age, sex, or religion.</p></div>
     <div class="clause"><h3>Enrollment period limitation</h3><p>Enrollment in the described plan type may be limited to certain times of the year unless you qualify for a Special Enrollment Period or are in your Medicare Initial Election Period.</p></div>
     <div class="clause"><h3>Solicitation and government affiliation</h3><p>This is a solicitation for insurance by Poshnee Tech LLC, a private entity that connects Medicare-eligible individuals with licensed insurance agents who can help them understand and compare Medicare Advantage, Special Needs Plan, and related coverage options available in their area. Poshnee Tech LLC and the licensed agents it works with are not connected with or endorsed by the United States government or the federal Medicare program. Not all agents are licensed to sell all products in all states. Not all plans are available in all areas.</p></div>
@@ -720,7 +699,7 @@ html:not(.js) .nojs-note{display:block}
 (function(){
   var tf=document.createElement('script');tf.type='text/javascript';tf.async=true;
   tf.src=('https:'==document.location.protocol?'https':'http')+
-    '://api.trustedform.com/trustedform.js?field=xxTrustedFormCertUrl&ping_field=xxTrustedFormPingUrl&l='+
+    '://api.trustedform.com/trustedform.js?field=trusted&l='+
     new Date().getTime()+Math.random();
   var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(tf,s);
 })();
@@ -730,23 +709,8 @@ html:not(.js) .nojs-note{display:block}
 (function(){
   var form=document.getElementById('leadForm');
   if(!form)return;
-  var steps=[].slice.call(form.querySelectorAll('.step'));
-  var bar=document.getElementById('bar'),label=document.getElementById('stepLabel'),count=document.getElementById('stepCount');
-  var names={1:'About You',2:'Your Medicare Status',3:'Consent'};
-  var current=1,sending=false;
-  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var sending=false;
 
-  function show(n,move){
-    current=n;
-    steps.forEach(function(s){s.hidden=(s.dataset.step!=String(n));});
-    bar.style.width=(n/3*100)+'%';label.textContent=names[n];count.textContent='Step '+n+' of 3';
-    if(move){
-      var c=document.getElementById('form'),top=c.getBoundingClientRect().top+window.pageYOffset-100;
-      if(window.pageYOffset>top)window.scrollTo({top:top,behavior:reduce?'auto':'smooth'});
-      var f=steps[n-1].querySelector('input');
-      if(f)setTimeout(function(){f.focus({preventScroll:true});},180);
-    }
-  }
   function err(id,on,el){
     var e=document.getElementById(id);if(e)e.classList.toggle('show',!!on);
     if(el){
@@ -759,30 +723,36 @@ html:not(.js) .nojs-note{display:block}
   function d(v){return (v||'').replace(/\D/g,'');}
   function tel(v){var n=d(v);if(n.length===11&&n.charAt(0)==='1')n=n.slice(1);return n;}
   function g(i){return document.getElementById(i);}
-  function validate(n){
+  function validate(){
     var ok=true;
-    if(n===1){
-      ok=err('e-fname',!g('fname').value.trim(),g('fname'))&&ok;
-      ok=err('e-lname',!g('lname').value.trim(),g('lname'))&&ok;
-      ok=err('e-zip',!/^\d{5}$/.test(g('zip').value.trim()),g('zip'))&&ok;
-      ok=err('e-phone',tel(g('phone').value).length!==10,g('phone'))&&ok;
-    }
-    if(n===2){
-      ok=err('e-age',!form.querySelector('input[name=age_band]:checked'))&&ok;
-      ok=err('e-ab',!form.querySelector('input[name=parts_ab]:checked'))&&ok;
-      ok=err('e-medicaid',!form.querySelector('input[name=medicaid]:checked'))&&ok;
-    }
-    if(n===3){
-      ok=err('e-consent1',!g('consent1').checked)&&ok;
-      ok=err('e-consent2',!g('consent2').checked)&&ok;
-    }
+    ok=err('e-fname',!g('fname').value.trim(),g('fname'))&&ok;
+    ok=err('e-lname',!g('lname').value.trim(),g('lname'))&&ok;
+    ok=err('e-zip',!/^\d{5}$/.test(g('zip').value.trim()),g('zip'))&&ok;
+    ok=err('e-phone',tel(g('phone').value).length!==10,g('phone'))&&ok;
+    ok=err('e-age',!g('age').value,g('age'))&&ok;
+    ok=err('e-ab',!g('partsab').value,g('partsab'))&&ok;
+    ok=err('e-medicaid',!g('medicaid').value,g('medicaid'))&&ok;
+    ok=err('e-consent1',!g('consent1').checked)&&ok;
+    ok=err('e-consent2',!g('consent2').checked)&&ok;
     return ok;
   }
-  // Move focus to the first thing the visitor still has to correct.
-  function focusBad(n){
-    var bad=steps[n-1].querySelector('[aria-invalid=true]')||
-            (steps[n-1].querySelector('.err.show')&&steps[n-1].querySelector('input'));
-    if(bad&&bad.focus)bad.focus();
+  // Move focus to the first thing the visitor still has to correct, and scroll it
+  // into view — on one long form the problem can be well above the button.
+  function focusBad(){
+    var bad=form.querySelector('[aria-invalid=true]');
+    if(!bad){
+      var e=form.querySelector('.err.show');
+      if(e){
+        var box=e.closest('.consent')||e.closest('.field');
+        bad=box&&box.querySelector('input,select');
+      }
+    }
+    if(bad&&bad.focus){
+      var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var scroller=bad.closest('.field')||bad.closest('.consent')||bad;
+      scroller.scrollIntoView({behavior:reduce?'auto':'smooth',block:'center'});
+      bad.focus({preventScroll:true});
+    }
   }
   // Clear an error as soon as the visitor starts fixing it.
   form.addEventListener('input',function(e){
@@ -790,45 +760,25 @@ html:not(.js) .nojs-note{display:block}
     if(t.getAttribute&&t.getAttribute('aria-invalid')==='true')err(t.getAttribute('aria-describedby'),false,t);
   });
   form.addEventListener('change',function(e){
-    var n=e.target.name,map={age_band:'e-age',parts_ab:'e-ab',medicaid:'e-medicaid',
-                             consent_contact:'e-consent1',terms_ack:'e-consent2'};
-    if(map[n]&&(e.target.checked||form.querySelector('input[name='+n+']:checked')))err(map[n],false);
-  });
-  form.addEventListener('click',function(e){
-    var b=e.target.closest('[data-next],[data-back]');if(!b)return;
-    if(b.dataset.next){
-      var from=Number(b.dataset.next)-1;
-      if(validate(from))show(Number(b.dataset.next),true); else focusBad(from);
-    } else show(Number(b.dataset.back),true);
+    var n=e.target.name;
+    var sel={age_band:'e-age',parts_ab:'e-ab',medicaid:'e-medicaid'};
+    var box={consent_contact:'e-consent1',terms_ack:'e-consent2'};
+    if(sel[n]){if(e.target.value)err(sel[n],false,e.target);return;}
+    if(box[n]&&e.target.checked)err(box[n],false);
   });
   form.addEventListener('submit',function(e){
-    // Enter pressed on step 1 or 2 triggers implicit submission — advance instead of
-    // validating a consent box the visitor has not been shown yet.
-    if(current<3){
-      e.preventDefault();
-      if(validate(current))show(current+1,true); else focusBad(current);
-      return;
-    }
     if(sending){e.preventDefault();return;}
-    // Re-validate every step: a visitor can reach step 3 and then go back and blank a field.
-    var ok=validate(1)&&validate(2);
-    ok=validate(3)&&ok;
-    if(!ok){
-      e.preventDefault();
-      for(var n=1;n<=3;n++){if(!validate(n)){show(n,true);focusBad(n);break;}}
-      return;
-    }
-    g('consentTextRendered').value=g('consentText').innerText.replace(/\s+/g,' ').trim();
-    g('pageUrl').value=window.location.href;
+    if(!validate()){e.preventDefault();focusBad();return;}
+    g('consentTextRendered').value=(g('consentText').textContent+' '+g('consentRest').textContent)
+      .replace(/\s+/g,' ').trim();
     g('submittedAt').value=new Date().toISOString();
-    if(!g('xxTrustedFormCertUrl').value){
-      var f=document.createElement('input');f.type='hidden';f.name='cert_status';f.value='missing';form.appendChild(f);
-    }
     sending=true;
     var btn=form.querySelector('button[type=submit]');
     if(btn){btn.disabled=true;btn.textContent='Sending\u2026';}
+    if(g('trusted').value){return;}
+    e.preventDefault();
+    setTimeout(function(){HTMLFormElement.prototype.submit.call(form);},1200);
   });
-  show(1,false);
 })();
 </script>
 <script>

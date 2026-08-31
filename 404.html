@@ -77,7 +77,8 @@ a:hover{color:var(--plum)}
 
 /* LOGO — one swappable block, shared by header and footer */
 .logo{display:inline-flex;align-items:center;gap:.6rem;text-decoration:none;white-space:nowrap;padding-block:.3rem;min-height:44px}
-.logo svg{width:38px;height:38px;flex:none;display:block}
+.logo img{height:62px;width:auto;flex:none;display:block}
+.logo.on-dark img{height:62px}
 .logo .wm{font-family:var(--display);font-size:21px;letter-spacing:-.042em;color:var(--plum);line-height:1}
 .logo .wm .l{font-weight:500}
 .logo .wm .h{font-weight:800}
@@ -380,7 +381,7 @@ html:not(.js) .nojs-note{display:block}
 @media (max-width:560px){
   .masthead .wrap{gap:.6rem}
   .logo{gap:.5rem}
-  .logo svg{width:32px;height:32px}
+  .logo img{height:56px}
   .logo .wm{font-size:15px}
   .nav .cta{margin-left:0;padding:.5rem .9rem;font-size:.90625rem;min-height:44px}
   .menu-btn{padding:.5rem .6rem;margin-left:.15rem}
@@ -392,7 +393,7 @@ html:not(.js) .nojs-note{display:block}
   .js .nav .cta{display:none}
   .js .nav .m-cta{display:flex;background:var(--plum);color:#fff;border-radius:var(--r-sm);justify-content:center;margin-bottom:.35rem}
   .js .nav .m-cta:hover{background:var(--plum-2);color:#fff}
-  .logo .wm{font-size:14px}
+  .logo img{height:48px}
   .utility .wrap{gap:.15rem 1rem;padding-block:.55rem}
   .utility .pre{display:none}
   .utility .pre-s{display:inline}
@@ -417,7 +418,7 @@ html:not(.js) .nojs-note{display:block}
 
 <header class="masthead">
   <div class="wrap">
-    <a class="logo" href="index.html" aria-label="OptimalHealthChoices — home"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="#2E1B33"/><path d="M30.46 19.08 A10.5 10.5 0 1 1 24.44 10.48" fill="none" stroke="#DE8A24" stroke-width="3.3" stroke-linecap="round"/><circle cx="28.6" cy="13.98" r="3.5" fill="#DE8A24"/></svg><span class="wm"><span class="l">Optimal</span><span class="h">HealthChoices</span></span></a>
+    <a class="logo" href="index.html" aria-label="OptimalHealthChoices — home"><img src="assets/logo/logo.svg" alt="" width="298" height="62"></a>
     <nav class="nav" aria-label="Primary">
       <div class="links" id="primary-links">
         <a class="m-cta" href="index.html#form">Get Started</a>
@@ -460,7 +461,7 @@ html:not(.js) .nojs-note{display:block}
   <div class="wrap">
     <div class="top">
       <div>
-        <span class="logo on-dark"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="rgba(255,255,255,.1)"/><path d="M30.46 19.08 A10.5 10.5 0 1 1 24.44 10.48" fill="none" stroke="#DE8A24" stroke-width="3.3" stroke-linecap="round"/><circle cx="28.6" cy="13.98" r="3.5" fill="#DE8A24"/></svg><span class="wm"><span class="l">Optimal</span><span class="h">HealthChoices</span></span></span>
+        <span class="logo on-dark"><img src="assets/logo/logo-on-dark.svg" alt="OptimalHealthChoices — Non-Government Website" width="298" height="62"></span>
         <address>
           <strong>OptimalHealthChoices.com</strong> is owned and operated by <strong>Poshnee Tech LLC</strong><br>
           5900 Balcones Drive, STE 100, Austin, TX 78731<br>
